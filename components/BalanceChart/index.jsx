@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import * as Recharts from "recharts";
-import "./BalanceChart.css";
 
 const balanceUrl = `${process.env.API_URL}balance-histories?sort=Month`;
 
@@ -25,7 +24,7 @@ function BalanceChart() {
 
   const args = {
     width: 370,
-    height: 150,
+    height: 140,
     margin: { top: 0, right: 0, left: 0, bottom: 0 },
     fillColor: "#b7e9ff",
     strokeColor: "#00A1E4",
