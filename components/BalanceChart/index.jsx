@@ -1,26 +1,39 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import * as Recharts from "recharts";
 import "./BalanceChart.css";
 
+const balanceUrl = `${process.env.API_URL}balance-histories?sort=Month`;
+
 function BalanceChart() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetch(balanceUrl, {headers: {Authorization: `Bearer ${process.env.API_TOKEN}`}})
+      .then(res => res.json())
+      .then(
+        (result) => {
+          setData(result.data.map((item) => ({
+            name: new Date(item.attributes.Month).toLocaleString('default', { month: 'long' }),
+            balance: item.attributes.Total,
+          })));
+        },
+        (error) => {
+          console.log(error);
+        }
+      )
+  }, []);
+
   const args = {
     width: 370,
     height: 150,
     margin: { top: 0, right: 0, left: 0, bottom: 0 },
     fillColor: "#b7e9ff",
     strokeColor: "#00A1E4",
-    dataKey: "blue",
+    dataKey: "balance",
     xAxisDataKey: "name",
     align: "center",
     verticalAlign: "bottom",
-    data: [
-      { name: "Jan", blue: 60 },
-      { name: "Feb", blue: 200 },
-      { name: "Mar", blue: 400 },
-      { name: "Apr", blue: 208 },
-      { name: "May", blue: 450 },
-      { name: "Jun", blue: 550 },
-    ],
+    data: data,
     ShowCartesianGrid: false,
     ShowXAxis: false,
     ShowYAxis: false,
