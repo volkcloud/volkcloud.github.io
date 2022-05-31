@@ -1,24 +1,38 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import * as Recharts from "recharts";
-import "./SimpleLineChart.css";
+import "./ProfitLossChart.css";
 
-function SimpleLineChart() {
+const balanceUrl = `${process.env.API_URL}profit-losses?sort=Month`;
+
+function ProfitLossChart() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetch(balanceUrl, {headers: {Authorization: `Bearer ${process.env.API_TOKEN}`}})
+      .then(res => res.json())
+      .then(
+        (result) => {
+          setData(result.data.map((item) => ({
+            name: new Date(item.attributes.Month).toLocaleString('default', { month: 'long' }),
+            profit: item.attributes.Profit,
+            loss: item.attributes.Loss,
+          })));
+        },
+        (error) => {
+          console.log(error);
+        }
+      )
+  }, []);
+
   const args = {
     width: 370,
     height: 150,
     margin: { top: 0, right: 0, left: 0, bottom: 0 },
     line1Color: "#00A1E4",
     line2Color: "#FF6250",
-    line1Key: "blue",
-    line2Key: "green",
-    data: [
-      { name: "A", blue: 60, green: 240 },
-      { name: "B", blue: 200, green: 139 },
-      { name: "C", blue: 400, green: 200 },
-      { name: "D", blue: 300, green: 220 },
-      { name: "E", blue: 450, green: 300 },
-      { name: "F", blue: 600, green: 380 },
-    ],
+    line1Key: "profit",
+    line2Key: "loss",
+    data: data,
     align: "center",
     verticalAlign: "bottom",
     ShowCartesianGrid: true,
@@ -46,4 +60,4 @@ function SimpleLineChart() {
   );
 }
 
-export default SimpleLineChart;
+export default ProfitLossChart;

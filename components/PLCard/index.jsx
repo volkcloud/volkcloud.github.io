@@ -1,5 +1,5 @@
 import React from "react";
-import SimpleLineChart from "../SimpleLineChart";
+import ProfitLossChart from "../ProfitLossChart";
 import "./PLCard.css";
 
 function PLCard(props) {
@@ -8,7 +8,7 @@ function PLCard(props) {
   return (
     <div className="pl-card">
       <div className="title-1 valign-text-middle poppins-normal-heavy-metal-20px">{title}</div>
-      <SimpleLineChart />
+      <ProfitLossChart />
       <div className="comment valign-text-middle">{comment}</div>
     </div>
   );
