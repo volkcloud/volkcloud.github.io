@@ -1,10 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Button from "../Button";
 import WireRow from "../WireRow";
 import "./WiresCard.css";
 
-function WiresCard(props) {
-  const { title, wireRow1Props, wireRow2Props, wireRow3Props } = props;
+const wiresUrl = `${process.env.API_URL}wires`;
+
+function WiresCard({ title }) {
+  const [wires, setWires] = useState([]);
+
+  useEffect(() => {
+    fetch(wiresUrl, {headers: {Authorization: `Bearer ${process.env.API_TOKEN}`}})
+      .then(res => res.json())
+      .then(
+        (result) => {
+          setWires(result.data.map((item) => ({
+            name: item.attributes.Name,
+            amount: item.attributes.Amount
+          })));
+        },
+        (error) => {
+          console.log(error);
+        }
+      )
+  }, []);
 
   return (
     <div className="wires-card">
@@ -16,9 +34,7 @@ function WiresCard(props) {
         <Button />
       </div>
       <div className="list-1">
-        <WireRow text={wireRow1Props.text} value={wireRow1Props.value} />
-        <WireRow text={wireRow2Props.text} value={wireRow2Props.value} className={wireRow2Props.className} />
-        <WireRow text={wireRow3Props.text} value={wireRow3Props.value} className={wireRow3Props.className} />
+        {wires.map((wire) => (<WireRow text={wire.name} value={wire.amount} />))}
       </div>
     </div>
   );

@@ -72,28 +72,8 @@ const transactionsCardData = {
     transactionRow22Props: transactionRow23Data,
 };
 
-const wireRow1Data = {
-    text: "Video design",
-    value: "$20,000",
-};
-
-const wireRow2Data = {
-    text: "SEO consultant",
-    value: "$5,000",
-    className: "wire-row-2",
-};
-
-const wireRow3Data = {
-    text: "Swag",
-    value: "$2,000",
-    className: "wire-row",
-};
-
 const wiresCardData = {
     title: "Pending wires",
-    wireRow1Props: wireRow1Data,
-    wireRow2Props: wireRow2Data,
-    wireRow3Props: wireRow3Data,
 };
 
 const animaCardData = {
