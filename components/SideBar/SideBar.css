@@ -1,0 +1,15 @@
+.side-bar {
+  align-items: flex-start;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  height: 1230px;
+  position: relative;
+  width: 200px;
+}
+
+.svb-cleaned-logo {
+  height: 80px;
+  width: 200px;
+}
+

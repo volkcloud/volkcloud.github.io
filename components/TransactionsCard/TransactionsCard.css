@@ -1,0 +1,47 @@
+.transactions-card {
+  align-items: flex-end;
+  background-color: var(--white);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 329px;
+  margin-top: 80px;
+  overflow: hidden;
+  padding: 19px 20px;
+  width: 450px;
+}
+
+.flex-row {
+  align-items: flex-start;
+  display: flex;
+  height: 33px;
+  min-width: 390px;
+  position: relative;
+}
+
+.title-2 {
+  height: 29px;
+  letter-spacing: 0;
+  width: 190px;
+}
+
+.divider {
+  align-self: flex-start;
+  height: 2px;
+  margin-left: 19px;
+  margin-top: 6px;
+  object-fit: cover;
+  width: 142px;
+}
+
+.list {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+  margin-top: 19px;
+  min-height: 230px;
+  position: relative;
+  width: 370px;
+}
+

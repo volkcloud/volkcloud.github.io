@@ -1,0 +1,76 @@
+.anima-card {
+  align-items: flex-end;
+  background-color: var(--white);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 259px;
+  margin-top: 60px;
+  overflow: hidden;
+  padding: 20px 29px;
+  width: 450px;
+}
+
+.text-frame {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  min-height: 134px;
+  width: 381px;
+}
+
+.title-6 {
+  height: 29px;
+  letter-spacing: 0;
+  margin-top: -1px;
+  width: 370px;
+}
+
+.divider-2 {
+  height: 2px;
+  margin-left: -1px;
+  margin-top: 10px;
+  object-fit: cover;
+  width: 142px;
+}
+
+.text-1 {
+  letter-spacing: 0;
+  line-height: 25px;
+  margin-top: 18px;
+  min-height: 75px;
+  width: 381px;
+}
+
+.logos-frame {
+  align-items: flex-start;
+  align-self: center;
+  display: flex;
+  margin-top: 45px;
+  min-width: 370px;
+}
+
+.anima-logo {
+  align-items: flex-start;
+  background-color: #3b3b3b;
+  border-radius: 20px;
+  display: flex;
+  height: 40px;
+  min-width: 40px;
+  padding: 10.9px 11.7px;
+}
+
+.logo {
+  height: 17px;
+  width: 15px;
+}
+
+.social {
+  align-items: flex-start;
+  display: flex;
+  height: 40px;
+  margin-left: 166px;
+  min-width: 164px;
+  position: relative;
+}
+

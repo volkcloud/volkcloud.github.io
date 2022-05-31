@@ -1,0 +1,63 @@
+.wire-row-1 {
+  align-items: center;
+  display: flex;
+  min-width: 370px;
+}
+
+.text {
+  height: 25px;
+  letter-spacing: 0;
+  line-height: 25px;
+  margin-bottom: 2.0px;
+  min-width: 97px;
+  white-space: nowrap;
+}
+
+.right-content {
+  align-items: center;
+  display: flex;
+  margin-left: 125px;
+  min-width: 148px;
+}
+
+.value-1 {
+  height: 25px;
+  letter-spacing: 0;
+  line-height: 25px;
+  margin-bottom: 1.0px;
+  margin-left: -48px;
+  text-align: right;
+  white-space: nowrap;
+  width: 90px;
+}
+
+.actions {
+  align-items: flex-start;
+  display: flex;
+  height: 40px;
+  margin-left: 10px;
+  min-width: 96px;
+  position: relative;
+}
+
+.wire-row-1.wire-row,
+.wire-row-1.wire-row-2 {
+  margin-top: 10px;
+}
+
+.wire-row-1.wire-row-2 .text {
+  min-width: 113px;
+}
+
+.wire-row-1.wire-row-2 .right-content {
+  margin-left: 109px;
+}
+
+.wire-row-1.wire-row .text {
+  min-width: 42px;
+}
+
+.wire-row-1.wire-row .right-content {
+  margin-left: 180px;
+}
+

@@ -1,0 +1,8 @@
+.menu {
+  align-items: flex-start;
+  display: flex;
+  height: 287px;
+  min-width: 200px;
+  position: relative;
+}
+

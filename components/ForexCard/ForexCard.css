@@ -1,0 +1,70 @@
+.forex-card {
+  align-items: center;
+  background-color: var(--white);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 318px;
+  margin-top: 60px;
+  overflow: hidden;
+  padding: 19px 0;
+  width: 450px;
+}
+
+.title-7 {
+  height: 29px;
+  letter-spacing: 0;
+  width: 370px;
+}
+
+.value-2 {
+  height: 60px;
+  letter-spacing: 0;
+  margin-top: 10px;
+  text-align: right;
+  width: 370px;
+}
+
+.chart-details {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-top: 11px;
+  min-height: 109px;
+  position: relative;
+  width: 370px;
+}
+
+.forex-details {
+  align-items: flex-start;
+  display: flex;
+  min-width: 370px;
+}
+
+.currency {
+  height: 29px;
+  letter-spacing: 0;
+  margin-top: -1px;
+  opacity: 0.5;
+  width: 197px;
+}
+
+.value-3 {
+  height: 29px;
+  letter-spacing: 0;
+  margin-top: -1px;
+  opacity: 0.5;
+  text-align: right;
+  width: 173px;
+}
+
+.forex-actions {
+  align-items: flex-start;
+  display: flex;
+  height: 40px;
+  margin-left: 52.0px;
+  margin-top: 20px;
+  min-width: 318px;
+  position: relative;
+}
+

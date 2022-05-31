@@ -1,0 +1,55 @@
+.transaction-row {
+  align-items: flex-start;
+  display: flex;
+  height: 50px;
+  min-width: 370px;
+}
+
+.frame {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  min-height: 50px;
+  width: 72px;
+}
+
+.title-3 {
+  height: 25px;
+  letter-spacing: 0;
+  line-height: 25px;
+  margin-top: -1px;
+  white-space: nowrap;
+}
+
+.date {
+  height: 25px;
+  letter-spacing: 0;
+  line-height: 25px;
+  opacity: 0.4;
+  white-space: nowrap;
+}
+
+.x000 {
+  height: 25px;
+  letter-spacing: 0;
+  line-height: 25px;
+  margin-left: 245px;
+  margin-top: -1.05px;
+  min-width: 53px;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.transaction-row.transaction-row-1 {
+  margin-top: 10px;
+}
+
+.transaction-row.transaction-row-1 .frame {
+  width: 68px;
+}
+
+.transaction-row.transaction-row-1 .x000 {
+  margin-left: 227px;
+  min-width: 75px;
+}
+

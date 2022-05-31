@@ -1,0 +1,27 @@
+.balance-card {
+  align-items: center;
+  background-color: var(--white);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 299px;
+  overflow: hidden;
+  padding: 19px 0;
+  position: relative;
+  width: 450px;
+}
+
+.title {
+  height: 29px;
+  letter-spacing: 0;
+  width: 370px;
+}
+
+.value {
+  height: 60px;
+  letter-spacing: 0;
+  margin-top: 10px;
+  text-align: right;
+  width: 370px;
+}
+
