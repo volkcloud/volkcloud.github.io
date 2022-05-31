@@ -25,7 +25,6 @@ function App() {
 export default App;
 const balanceCardData = {
     title: "Balance",
-    value: "$76,528,112",
 };
 
 const pLCardData = {
