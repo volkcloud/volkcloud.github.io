@@ -28,10 +28,6 @@ function SVBHome(props) {
             <PLCard title={pLCardProps.title} comment={pLCardProps.comment} />
             <TransactionsCard
               title={transactionsCardProps.title}
-              transactionRow1Props={transactionsCardProps.transactionRow1Props}
-              transactionRow2Props={transactionsCardProps.transactionRow2Props}
-              transactionRow21Props={transactionsCardProps.transactionRow21Props}
-              transactionRow22Props={transactionsCardProps.transactionRow22Props}
             />
           </div>
           <div className="card-container-1">

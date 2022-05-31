@@ -4,7 +4,7 @@ import * as Recharts from "recharts";
 const balanceUrl = `${process.env.API_URL}balance-histories?sort=Month`;
 
 function BalanceChart() {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState([{name:"January", balance: 0}]);
 
   useEffect(() => {
     fetch(balanceUrl, {headers: {Authorization: `Bearer ${process.env.API_TOKEN}`}})

@@ -1,11 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import DatePicker from "../DatePicker";
 import TransactionRow from "../TransactionRow";
-import TransactionRow2 from "../TransactionRow2";
 import "./TransactionsCard.css";
 
-function TransactionsCard(props) {
-  const { title, transactionRow1Props, transactionRow2Props, transactionRow21Props, transactionRow22Props } = props;
+const tranasctionsUrl = `${process.env.API_URL}transactions`;
+
+function TransactionsCard({ title }) {
+  const [transactions, setTransactions] = useState([{name:"January", balance: 0}]);
+
+  useEffect(() => {
+    fetch(tranasctionsUrl, {headers: {Authorization: `Bearer ${process.env.API_TOKEN}`}})
+      .then(res => res.json())
+      .then(
+        (result) => {
+          setTransactions(result.data.map((item) => ({
+            date: item.attributes.Date,
+            name: item.attributes.Name,
+            amount: item.attributes.Amount,
+          })));
+        },
+        (error) => {
+          console.log(error);
+        }
+      )
+  }, []);
 
   return (
     <div className="transactions-card">
@@ -15,23 +33,11 @@ function TransactionsCard(props) {
       </div>
       <img className="divider" src="/img/divider@2x.svg" />
       <div className="list">
-        <TransactionRow
-          title={transactionRow1Props.title}
-          date={transactionRow1Props.date}
-          x000={transactionRow1Props.x000}
-        />
-        <TransactionRow
-          title={transactionRow2Props.title}
-          date={transactionRow2Props.date}
-          x000={transactionRow2Props.x000}
-          className={transactionRow2Props.className}
-        />
-        <TransactionRow2 x000={transactionRow21Props.x000} frameProps={transactionRow21Props.frameProps} />
-        <TransactionRow2
-          x000={transactionRow22Props.x000}
-          className={transactionRow22Props.className}
-          frameProps={transactionRow22Props.frameProps}
-        />
+        {transactions.map((transaction) => (<TransactionRow
+          title={transaction.name}
+          date={transaction.date}
+          value={transaction.amount}
+        />))}
       </div>
     </div>
   );

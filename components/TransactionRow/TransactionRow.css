@@ -3,6 +3,7 @@
   display: flex;
   height: 50px;
   min-width: 370px;
+  margin-top: 10px;
 }
 
 .frame {
@@ -33,7 +34,7 @@
   height: 25px;
   letter-spacing: 0;
   line-height: 25px;
-  margin-left: 245px;
+  margin-left: 220px;
   margin-top: -1.05px;
   min-width: 53px;
   text-align: right;

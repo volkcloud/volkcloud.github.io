@@ -4,7 +4,6 @@
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  height: 329px;
   margin-top: 80px;
   overflow: hidden;
   padding: 19px 20px;
@@ -40,7 +39,6 @@
   flex-direction: column;
   margin-right: 20px;
   margin-top: 19px;
-  min-height: 230px;
   position: relative;
   width: 370px;
 }
