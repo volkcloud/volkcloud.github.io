@@ -3,6 +3,8 @@ import Medium from "../Medium";
 import Youtube from "../Youtube";
 import Github from "../Github";
 import "./AnimaCard.css";
+import * as AntDesignIcons from "@ant-design/icons";
+import SocialIcon from "../SocialIcon";
 
 function AnimaCard(props) {
   const { title, text } = props;
@@ -19,9 +21,9 @@ function AnimaCard(props) {
           <img className="logo" src="/img/logo@2x.svg" />
         </div>
         <div className="social">
-          <Medium />
-          <Youtube />
-          <Github />
+          <SocialIcon icon={<AntDesignIcons.MediumOutlined />} />
+          <SocialIcon icon={<AntDesignIcons.YoutubeFilled />} />
+          <SocialIcon icon={<AntDesignIcons.GithubFilled />} />
         </div>
       </div>
     </div>

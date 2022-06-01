@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ForexChart from "../ForexChart";
 import "./ForexCard.css";
+import * as AntDesignIcons from "@ant-design/icons";
 import Button from "../Button";
 
 const balanceUrl = `${process.env.API_URL}forex-balance`;
@@ -46,8 +47,8 @@ function ForexCard({ title, currency }) {
         <ForexChart />
       </div>
       <div className="forex-actions">
-        <Button text={`Sell | $${sellRate}`} iconName="DollarCircleOutlined" style={{"marginRight": "5px"}} />
-        <Button text={`Buy | $${buyRate}`} iconName="DollarCircleFilled" style={{"marginLeft": "5px"}} />
+        <Button text={`Sell | $${sellRate}`} icon={<AntDesignIcons.DollarCircleOutlined />} style={{"marginRight": "5px"}} />
+        <Button text={`Buy | $${buyRate}`} icon={<AntDesignIcons.DollarCircleFilled />} style={{"marginLeft": "5px"}} />
       </div>
     </div>
   );

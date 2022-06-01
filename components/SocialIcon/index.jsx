@@ -2,17 +2,16 @@ import React from "react";
 import "antd/dist/antd.css";
 import "antd/dist/antd.variable.css";
 import * as Antd from "antd";
-import "./Button.css";
+import "./SocialIcon.css";
 
-function Button({ text, icon, style={} }) {
+function SocialIcon({ icon }) {
   return (
-    <div className="button" style={style}>
+    <div className="social-icon">
       <Antd.Button type="ghost" shape="default" size="large" disabled={false}>
         {icon}
-        {text}
       </Antd.Button>
     </div>
   );
 }
 
-export default Button;
+export default SocialIcon;
