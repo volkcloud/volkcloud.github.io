@@ -14,7 +14,7 @@ function BalanceCard({ title }) {
       .then((res) => res.json())
       .then(
         (result) => {
-          setValue(result.data.attributes.Total);
+          setValue(result.data.attributes.Amount);
         },
         (error) => {
           console.log(error);

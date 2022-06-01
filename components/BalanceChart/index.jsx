@@ -18,7 +18,7 @@ function BalanceChart() {
               name: new Date(item.attributes.Month).toLocaleString("default", {
                 month: "long",
               }),
-              balance: item.attributes.Total,
+              balance: item.attributes.Amount,
             }))
           );
         },
