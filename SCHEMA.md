@@ -6,11 +6,11 @@ Do not add multiple rows for the same month on these tables.
 
 ### BalanceHistory
 - **Month**: Date (date)
-- **Total**: Number (Decimal)
+- **Amount**: Number (Decimal)
 
 ### ForexBalanceHistory
 - **Month**: Date (date)
-- **Total**: Number (Decimal)
+- **Amount**: Number (Decimal)
 
 ### ProfitLoss
 - **Month**: Date (date)
