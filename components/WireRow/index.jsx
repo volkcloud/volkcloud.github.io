@@ -1,7 +1,7 @@
-import React from "react";
-import "./WireRow.css";
 import * as AntDesignIcons from "@ant-design/icons";
+import React from "react";
 import ActionButton from "../buttons/ActionButton";
+import "./WireRow.css";
 
 function WireRow({ text, value }) {
   const formattedValue = parseFloat(value).toFixed(2);

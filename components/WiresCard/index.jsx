@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
 import * as AntDesignIcons from "@ant-design/icons";
+import React, { useEffect, useState } from "react";
 import Button from "../buttons/Button";
 import WireRow from "../WireRow";
 import "./WiresCard.css";

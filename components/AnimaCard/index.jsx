@@ -1,11 +1,9 @@
-import React from "react";
-import "./AnimaCard.css";
 import * as AntDesignIcons from "@ant-design/icons";
+import React from "react";
 import SocialIcon from "../buttons/SocialIcon";
+import "./AnimaCard.css";
 
-function AnimaCard(props) {
-  const { title, text } = props;
-
+function AnimaCard({ title, text }) {
   return (
     <div className="anima-card">
       <div className="text-frame">

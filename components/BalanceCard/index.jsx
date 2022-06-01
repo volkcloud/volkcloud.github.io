@@ -4,8 +4,7 @@ import "./BalanceCard.css";
 
 const balanceUrl = `${process.env.API_URL}balance`;
 
-function BalanceCard(props) {
-  const { title } = props;
+function BalanceCard({ title }) {
   const [value, setValue] = useState(0);
 
   useEffect(() => {

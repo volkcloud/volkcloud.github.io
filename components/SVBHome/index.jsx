@@ -1,11 +1,11 @@
 import React from "react";
-import SideBar from "../SideBar";
+import AnimaCard from "../AnimaCard";
 import BalanceCard from "../BalanceCard";
+import ForexCard from "../ForexCard";
 import PLCard from "../PLCard";
+import SideBar from "../SideBar";
 import TransactionsCard from "../TransactionsCard";
 import WiresCard from "../WiresCard";
-import AnimaCard from "../AnimaCard";
-import ForexCard from "../ForexCard";
 import "./SVBHome.css";
 
 function SVBHome(props) {

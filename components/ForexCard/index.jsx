@@ -1,8 +1,8 @@
+import * as AntDesignIcons from "@ant-design/icons";
 import React, { useEffect, useState } from "react";
+import Button from "../buttons/Button";
 import ForexChart from "../ForexChart";
 import "./ForexCard.css";
-import * as AntDesignIcons from "@ant-design/icons";
-import Button from "../buttons/Button";
 
 const balanceUrl = `${process.env.API_URL}forex-balance`;
 const rateUrl = `${process.env.API_URL}forex-rate`;

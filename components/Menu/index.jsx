@@ -1,8 +1,8 @@
-import React from "react";
-import "antd/dist/antd.css";
-import "antd/dist/antd.variable.css";
 import * as AntDesignIcons from "@ant-design/icons";
 import * as Antd from "antd";
+import "antd/dist/antd.css";
+import "antd/dist/antd.variable.css";
+import React from "react";
 import "./Menu.css";
 
 function Menu() {
