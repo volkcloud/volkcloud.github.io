@@ -6,3 +6,18 @@
   position: relative;
 }
 
+.menu-1 {
+  height: 287px;
+}
+
+.ant-menu-dark .ant-menu-item-divider {
+  border-color: #ffffff;
+}
+
+.menu-1 {
+  font-family: "-apple-system","BlinkMacSystemFont","Segoe UI","Roboto","Helvetica Neue","Arial","sans-serif","Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
+
+.ant-menu.ant-menu-dark {
+  background: #151718;
+}
