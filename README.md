@@ -1,6 +1,8 @@
 # Bank website
 
-**A functioning bank prototype powered by Anima & Strapi**
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9d830211-5fb8-4d50-9622-0931e0d8a36f/deploy-status)](https://app.netlify.com/sites/anima-bank-demo/deploys)
+
+**A functioning bank prototype powered by Anima & Strapi: [Live Demo](https://anima-bank-demo.netlify.app/)**
 
 Most of the code was generated automatically with [Anima App](https://www.animaapp.com).
 
