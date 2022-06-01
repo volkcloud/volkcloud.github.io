@@ -1,7 +1,7 @@
 import React from "react";
-import DeleteButton from "../DeleteButton";
-import ApproveButton from "../ApproveButton";
 import "./WireRow.css";
+import * as AntDesignIcons from "@ant-design/icons";
+import ActionButton from "../ActionButton";
 
 function WireRow({ text, value }) {
   const formattedValue = parseFloat(value).toFixed(2);
@@ -12,8 +12,8 @@ function WireRow({ text, value }) {
       <div className="right-content">
         <div className="value-1 valign-text-middle poppins-medium-heavy-metal-15px">${formattedValue}</div>
         <div className="actions">
-          <DeleteButton />
-          <ApproveButton />
+          <ActionButton icon={<AntDesignIcons.CloseCircleOutlined />} />
+          <ActionButton icon={<AntDesignIcons.CheckOutlined />} />
         </div>
       </div>
     </div>
