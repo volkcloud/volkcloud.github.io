@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ForexChart from "../ForexChart";
-import SellButton from "../SellButton";
-import BuyButton from "../BuyButton";
 import "./ForexCard.css";
+import Button from "../Button";
 
 const balanceUrl = `${process.env.API_URL}balance`;
 
@@ -34,8 +33,8 @@ function ForexCard({ title, currency, value2 }) {
         <ForexChart />
       </div>
       <div className="forex-actions">
-        <SellButton />
-        <BuyButton />
+        <Button text="Sell | $1.079" iconName="DollarCircleOutlined" style={{"margin-right": "5px"}} />
+        <Button text="Buy | $1.081" iconName="DollarCircleFilled" style={{"margin-left": "5px"}} />
       </div>
     </div>
   );
