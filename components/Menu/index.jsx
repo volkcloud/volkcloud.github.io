@@ -28,7 +28,11 @@ function Menu() {
           </Antd.Menu.Item>
 
           <Antd.Menu.ItemGroup key="g543" title="Support">
-            <Antd.Menu.Item key="873" icon={<AntDesignIcons.WechatFilled />} style={{"marginTop": "20px"}}>
+            <Antd.Menu.Item
+              key="873"
+              icon={<AntDesignIcons.WechatFilled />}
+              style={{ marginTop: "20px" }}
+            >
               Chat
             </Antd.Menu.Item>
 

@@ -4,10 +4,11 @@ import "antd/dist/antd.variable.css";
 import React from "react";
 import "./DatePicker.css";
 
-function DatePicker() {
+function DatePicker({ onChange }) {
   return (
     <div className="date-picker">
       <Antd.DatePicker
+        onChange={onChange}
         picker="date"
         size="middle"
         placeholder="Select date"

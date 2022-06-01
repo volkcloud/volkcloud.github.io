@@ -10,8 +10,12 @@ function TransactionsCard({ title }) {
     { name: "January", balance: 0 },
   ]);
 
-  useEffect(() => {
-    fetch(tranasctionsUrl, {
+  function fetchTransactions(date = "") {
+    let url = tranasctionsUrl;
+    if (date.length > 0) {
+      url += `?filters[date][$eq]=${date}`;
+    }
+    fetch(url, {
       headers: { Authorization: `Bearer ${process.env.API_TOKEN}` },
     })
       .then((res) => res.json())
@@ -29,7 +33,19 @@ function TransactionsCard({ title }) {
           console.log(error);
         }
       );
+  }
+
+  useEffect(() => {
+    fetchTransactions();
   }, []);
+
+  function datePickerChange(date) {
+    if (date) {
+      fetchTransactions(date.format("YYYY-MM-DD"));
+    } else {
+      fetchTransactions();
+    }
+  }
 
   return (
     <div className="transactions-card">
@@ -37,7 +53,7 @@ function TransactionsCard({ title }) {
         <div className="title-2 valign-text-middle poppins-normal-heavy-metal-20px">
           {title}
         </div>
-        <DatePicker />
+        <DatePicker onChange={datePickerChange} />
       </div>
       <img className="divider" src="/img/divider@2x.svg" />
       <div className="list">
