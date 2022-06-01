@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import ForexChart from "../ForexChart";
 import "./ForexCard.css";
 import * as AntDesignIcons from "@ant-design/icons";
-import Button from "../Button";
+import Button from "../buttons/Button";
 
 const balanceUrl = `${process.env.API_URL}forex-balance`;
 const rateUrl = `${process.env.API_URL}forex-rate`;

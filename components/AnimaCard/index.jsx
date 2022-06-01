@@ -1,10 +1,7 @@
 import React from "react";
-import Medium from "../Medium";
-import Youtube from "../Youtube";
-import Github from "../Github";
 import "./AnimaCard.css";
 import * as AntDesignIcons from "@ant-design/icons";
-import SocialIcon from "../SocialIcon";
+import SocialIcon from "../buttons/SocialIcon";
 
 function AnimaCard(props) {
   const { title, text } = props;
