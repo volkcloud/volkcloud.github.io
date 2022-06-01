@@ -11,6 +11,7 @@ Most of the code was generated automatically with [Anima App](https://www.animaa
 2. Create a `.env` file and add the following variables:
     - API_URL: The url of your strapi service (i.e. http://localhost:1337/)
     - API_TOKEN: An API token for strapi (excluding the word 'bearer')
+3. Create the [Schema](SCHEMA.md) and populate with data
 
 ### Run locally
 ```
