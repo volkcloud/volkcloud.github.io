@@ -34,6 +34,7 @@ function TransactionsCard({ title }) {
       <img className="divider" src="/img/divider@2x.svg" />
       <div className="list">
         {transactions.map((transaction) => (<TransactionRow
+          key={transaction.name}
           title={transaction.name}
           date={transaction.date}
           value={transaction.amount}

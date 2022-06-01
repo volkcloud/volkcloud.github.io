@@ -34,7 +34,7 @@ function WiresCard({ title }) {
         <Button />
       </div>
       <div className="list-1">
-        {wires.map((wire) => (<WireRow text={wire.name} value={wire.amount} />))}
+        {wires.map((wire) => (<WireRow key={wire.name} text={wire.name} value={wire.amount} />))}
       </div>
     </div>
   );
