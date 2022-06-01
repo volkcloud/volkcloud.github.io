@@ -3,38 +3,51 @@ import ForexChart from "../ForexChart";
 import "./ForexCard.css";
 import Button from "../Button";
 
-const balanceUrl = `${process.env.API_URL}balance`;
+const balanceUrl = `${process.env.API_URL}forex-balance`;
+const rateUrl = `${process.env.API_URL}forex-rate`;
+const buyRateUrl = `${process.env.API_URL}forex-buy-rate`;
+const sellRateUrl = `${process.env.API_URL}forex-sell-rate`;
 
-function ForexCard({ title, currency, value2 }) {
-  const [value, setValue] = useState(0);
+function ForexCard({ title, currency }) {
+  const [balance, setBalance] = useState(0);
+  const [rate, setRate] = useState(0);
+  const [buyRate, setBuyRate] = useState(0);
+  const [sellRate, setSellRate] = useState(0);
+
+  function getValue(url, func){
+    fetch(url, {headers: {Authorization: `Bearer ${process.env.API_TOKEN}`}})
+    .then(res => res.json())
+    .then(
+      (result) => {
+        func(result.data.attributes.Amount);
+      },
+      (error) => {
+        console.log(error);
+      }
+    )
+  }
 
   useEffect(() => {
-    fetch(balanceUrl, {headers: {Authorization: `Bearer ${process.env.API_TOKEN}`}})
-      .then(res => res.json())
-      .then(
-        (result) => {
-          setValue(result.data.attributes.Total);
-        },
-        (error) => {
-          console.log(error);
-        }
-      )
+    getValue(balanceUrl, setBalance);
+    getValue(rateUrl, setRate);
+    getValue(sellRateUrl, setSellRate);
+    getValue(buyRateUrl, setBuyRate);
   }, []);
 
   return (
     <div className="forex-card">
       <div className="title-7 valign-text-middle poppins-normal-heavy-metal-20px">{title}</div>
-      <div className="value-2 valign-text-middle poppins-semi-bold-heavy-metal-40px">€{value.toLocaleString(undefined, {maximumFractionDigits:2})}</div>
+      <div className="value-2 valign-text-middle poppins-semi-bold-heavy-metal-40px">€{balance.toLocaleString(undefined, {maximumFractionDigits:2})}</div>
       <div className="chart-details">
         <div className="forex-details poppins-normal-heavy-metal-20px">
           <div className="currency valign-text-middle">{currency}</div>
-          <div className="value-3 valign-text-middle">{value2}</div>
+          <div className="value-3 valign-text-middle">{rate}</div>
         </div>
         <ForexChart />
       </div>
       <div className="forex-actions">
-        <Button text="Sell | $1.079" iconName="DollarCircleOutlined" style={{"margin-right": "5px"}} />
-        <Button text="Buy | $1.081" iconName="DollarCircleFilled" style={{"margin-left": "5px"}} />
+        <Button text={`Sell | $${sellRate}`} iconName="DollarCircleOutlined" style={{"marginRight": "5px"}} />
+        <Button text={`Buy | $${buyRate}`} iconName="DollarCircleFilled" style={{"marginLeft": "5px"}} />
       </div>
     </div>
   );
