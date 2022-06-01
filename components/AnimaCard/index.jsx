@@ -7,7 +7,9 @@ function AnimaCard({ title, text }) {
   return (
     <div className="anima-card">
       <div className="text-frame">
-        <div className="title-6 valign-text-middle poppins-normal-heavy-metal-20px">{title}</div>
+        <div className="title-6 valign-text-middle poppins-normal-heavy-metal-20px">
+          {title}
+        </div>
         <img className="divider-2" src="/img/divider-2@2x.svg" />
         <p className="text-1 poppins-normal-heavy-metal-15px">{text}</p>
       </div>

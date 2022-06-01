@@ -15,17 +15,19 @@ function ForexCard({ title, currency }) {
   const [buyRate, setBuyRate] = useState(0);
   const [sellRate, setSellRate] = useState(0);
 
-  function getValue(url, func){
-    fetch(url, {headers: {Authorization: `Bearer ${process.env.API_TOKEN}`}})
-    .then(res => res.json())
-    .then(
-      (result) => {
-        func(result.data.attributes.Amount);
-      },
-      (error) => {
-        console.log(error);
-      }
-    )
+  function getValue(url, func) {
+    fetch(url, {
+      headers: { Authorization: `Bearer ${process.env.API_TOKEN}` },
+    })
+      .then((res) => res.json())
+      .then(
+        (result) => {
+          func(result.data.attributes.Amount);
+        },
+        (error) => {
+          console.log(error);
+        }
+      );
   }
 
   useEffect(() => {
@@ -37,8 +39,12 @@ function ForexCard({ title, currency }) {
 
   return (
     <div className="forex-card">
-      <div className="title-7 valign-text-middle poppins-normal-heavy-metal-20px">{title}</div>
-      <div className="value-2 valign-text-middle poppins-semi-bold-heavy-metal-40px">€{balance.toLocaleString(undefined, {maximumFractionDigits:2})}</div>
+      <div className="title-7 valign-text-middle poppins-normal-heavy-metal-20px">
+        {title}
+      </div>
+      <div className="value-2 valign-text-middle poppins-semi-bold-heavy-metal-40px">
+        €{balance.toLocaleString(undefined, { maximumFractionDigits: 2 })}
+      </div>
       <div className="chart-details">
         <div className="forex-details poppins-normal-heavy-metal-20px">
           <div className="currency valign-text-middle">{currency}</div>
@@ -47,8 +53,16 @@ function ForexCard({ title, currency }) {
         <ForexChart />
       </div>
       <div className="forex-actions">
-        <Button text={`Sell | $${sellRate}`} icon={<AntDesignIcons.DollarCircleOutlined />} style={{"marginRight": "5px"}} />
-        <Button text={`Buy | $${buyRate}`} icon={<AntDesignIcons.DollarCircleFilled />} style={{"marginLeft": "5px"}} />
+        <Button
+          text={`Sell | $${sellRate}`}
+          icon={<AntDesignIcons.DollarCircleOutlined />}
+          style={{ marginRight: "5px" }}
+        />
+        <Button
+          text={`Buy | $${buyRate}`}
+          icon={<AntDesignIcons.DollarCircleFilled />}
+          style={{ marginLeft: "5px" }}
+        />
       </div>
     </div>
   );

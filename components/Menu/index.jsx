@@ -32,7 +32,10 @@ function Menu() {
               Chat
             </Antd.Menu.Item>
 
-            <Antd.Menu.Item key="179" icon={<AntDesignIcons.QuestionCircleFilled />}>
+            <Antd.Menu.Item
+              key="179"
+              icon={<AntDesignIcons.QuestionCircleFilled />}
+            >
               FAQ
             </Antd.Menu.Item>
             <Antd.Menu.Divider />

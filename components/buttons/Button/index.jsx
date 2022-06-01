@@ -4,7 +4,7 @@ import "antd/dist/antd.variable.css";
 import React from "react";
 import "./Button.css";
 
-function Button({ text, icon, style={} }) {
+function Button({ text, icon, style = {} }) {
   return (
     <div className="button" style={style}>
       <Antd.Button type="ghost" shape="default" size="large" disabled={false}>

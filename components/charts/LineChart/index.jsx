@@ -19,16 +19,31 @@ function LineChart({ data, lines }) {
     widgetCategory: "6216125a39298487a332afed",
     widgetCategoryName: "Charts",
   };
-  
+
   return (
     <div className="simple-line-chart">
       <Recharts.LineChart {...args}>
-        {args.ShowCartesianGrid && <Recharts.CartesianGrid strokeDasharray="3 3" />}
+        {args.ShowCartesianGrid && (
+          <Recharts.CartesianGrid strokeDasharray="3 3" />
+        )}
         <Recharts.XAxis dataKey="name" hide={!args.ShowXAxis} />
         <Recharts.YAxis hide={!args.ShowYAxis} />
         {args.ShowTooltip && <Recharts.Tooltip />}
-        {args.ShowLegend && <Recharts.Legend align={args.align} verticalAlign={args.verticalAlign} />}
-        {lines.map((line) => (<Recharts.Line type="monotone" key={line.key} dataKey={line.key} stroke={line.color} dot={false} />))}
+        {args.ShowLegend && (
+          <Recharts.Legend
+            align={args.align}
+            verticalAlign={args.verticalAlign}
+          />
+        )}
+        {lines.map((line) => (
+          <Recharts.Line
+            type="monotone"
+            key={line.key}
+            dataKey={line.key}
+            stroke={line.color}
+            dot={false}
+          />
+        ))}
       </Recharts.LineChart>
     </div>
   );

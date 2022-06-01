@@ -7,7 +7,9 @@ function PLCard(props) {
 
   return (
     <div className="pl-card">
-      <div className="title-1 valign-text-middle poppins-normal-heavy-metal-20px">{title}</div>
+      <div className="title-1 valign-text-middle poppins-normal-heavy-metal-20px">
+        {title}
+      </div>
       <ProfitLossChart />
       <div className="comment valign-text-middle">{comment}</div>
     </div>

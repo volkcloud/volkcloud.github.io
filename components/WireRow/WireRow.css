@@ -9,7 +9,7 @@
   height: 25px;
   letter-spacing: 0;
   line-height: 25px;
-  margin-bottom: 2.0px;
+  margin-bottom: 2px;
   min-width: 97px;
   white-space: nowrap;
 }
@@ -25,7 +25,7 @@
   height: 25px;
   letter-spacing: 0;
   line-height: 25px;
-  margin-bottom: 1.0px;
+  margin-bottom: 1px;
   margin-left: -48px;
   text-align: right;
   white-space: nowrap;
@@ -61,4 +61,3 @@
 .wire-row-1.wire-row .right-content {
   margin-left: 180px;
 }
-

@@ -25,12 +25,24 @@ function FillChart({ data, dataKey, height, tooltip }) {
   return (
     <div className="fill-chart">
       <Recharts.AreaChart {...args}>
-        {args.ShowCartesianGrid && <Recharts.CartesianGrid strokeDasharray="3 3" />}
+        {args.ShowCartesianGrid && (
+          <Recharts.CartesianGrid strokeDasharray="3 3" />
+        )}
         <Recharts.XAxis dataKey={args.xAxisDataKey} hide={!args.ShowXAxis} />
         <Recharts.YAxis hide={!args.ShowYAxis} />
         {args.ShowTooltip && <Recharts.Tooltip />}
-        {args.ShowLegend && <Recharts.Legend align={args.align} verticalAlign={args.verticalAlign} />}
-        <Recharts.Area type="monotone" dataKey={args.dataKey} stroke={args.strokeColor} fill={args.fillColor} />
+        {args.ShowLegend && (
+          <Recharts.Legend
+            align={args.align}
+            verticalAlign={args.verticalAlign}
+          />
+        )}
+        <Recharts.Area
+          type="monotone"
+          dataKey={args.dataKey}
+          stroke={args.strokeColor}
+          fill={args.fillColor}
+        />
       </Recharts.AreaChart>
     </div>
   );
