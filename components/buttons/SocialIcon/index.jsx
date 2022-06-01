@@ -7,7 +7,13 @@ import "./SocialIcon.css";
 function SocialIcon({ icon, url }) {
   return (
     <div className="social-icon">
-      <Antd.Button type="ghost" shape="default" size="large" disabled={false} onClick={e =>  window.location.href=url}>
+      <Antd.Button
+        type="ghost"
+        shape="default"
+        size="large"
+        disabled={false}
+        onClick={(e) => (window.location.href = url)}
+      >
         {icon}
       </Antd.Button>
     </div>

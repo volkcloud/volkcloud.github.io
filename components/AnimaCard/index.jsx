@@ -18,9 +18,18 @@ function AnimaCard({ title, text }) {
           <img className="logo" src="/img/logo@2x.svg" />
         </div>
         <div className="social">
-          <SocialIcon icon={<AntDesignIcons.MediumOutlined />} url="https://animaapp.medium.com/" />
-          <SocialIcon icon={<AntDesignIcons.YoutubeFilled />} url="https://www.youtube.com/c/animaapp" />
-          <SocialIcon icon={<AntDesignIcons.GithubFilled />} url="https://github.com/AnimaApp" />
+          <SocialIcon
+            icon={<AntDesignIcons.MediumOutlined />}
+            url="https://animaapp.medium.com/"
+          />
+          <SocialIcon
+            icon={<AntDesignIcons.YoutubeFilled />}
+            url="https://www.youtube.com/c/animaapp"
+          />
+          <SocialIcon
+            icon={<AntDesignIcons.GithubFilled />}
+            url="https://github.com/AnimaApp"
+          />
         </div>
       </div>
     </div>

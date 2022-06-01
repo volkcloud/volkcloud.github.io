@@ -8,46 +8,31 @@ import TransactionsCard from "../TransactionsCard";
 import WiresCard from "../WiresCard";
 import "./SVBHome.css";
 
-function SVBHome(props) {
-  const {
-    balanceCardProps,
-    pLCardProps,
-    transactionsCardProps,
-    wiresCardProps,
-    animaCardProps,
-    forexCardProps,
-  } = props;
-
+function SVBHome() {
   return (
     <div className="container-center-horizontal">
       <div className="svb-home screen">
         <SideBar />
         <div className="content">
           <div className="card-container">
-            <BalanceCard
-              title={balanceCardProps.title}
-              value={balanceCardProps.value}
-            />
-            <PLCard title={pLCardProps.title} comment={pLCardProps.comment} />
-            <TransactionsCard title={transactionsCardProps.title} />
+            <BalanceCard title="Balance" />
+            <PLCard title="Profit & Loss" comment="Runway: Infinite" />
+            <TransactionsCard title="Transactions" />
           </div>
           <div className="card-container-1">
-            <WiresCard
-              title={wiresCardProps.title}
-              wireRow1Props={wiresCardProps.wireRow1Props}
-              wireRow2Props={wiresCardProps.wireRow2Props}
-              wireRow3Props={wiresCardProps.wireRow3Props}
-            />
+            <WiresCard title="Pending wires" />
             <AnimaCard
-              title={animaCardProps.title}
-              text={animaCardProps.text}
+              title="Built with Anima"
+              text={
+                <React.Fragment>
+                  R&amp;D teams build cloud apps 10x faster with Anima. <br />
+                  Turn Figma / Adobe XD / Sketch to React code.
+                  <br />
+                  We make developers &amp; designers happier.
+                </React.Fragment>
+              }
             />
-            <ForexCard
-              title={forexCardProps.title}
-              value1={forexCardProps.value1}
-              currency={forexCardProps.currency}
-              value2={forexCardProps.value2}
-            />
+            <ForexCard title="Forex account - EUR" currency="EUR:USD" />
           </div>
         </div>
       </div>

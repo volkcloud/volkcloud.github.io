@@ -15,15 +15,33 @@ function Menu() {
           }}
           theme="light"
         >
-          <Antd.Menu.Item key="508" icon={<AntDesignIcons.BarChartOutlined />} onClick={e =>  window.location.href='https://www.animaapp.com/'}>
+          <Antd.Menu.Item
+            key="508"
+            icon={<AntDesignIcons.BarChartOutlined />}
+            onClick={(e) =>
+              (window.location.href = "https://www.animaapp.com/")
+            }
+          >
             Dashboard
           </Antd.Menu.Item>
 
-          <Antd.Menu.Item key="767" icon={<AntDesignIcons.UserOutlined />} onClick={e =>  window.location.href='https://www.animaapp.com/'}>
+          <Antd.Menu.Item
+            key="767"
+            icon={<AntDesignIcons.UserOutlined />}
+            onClick={(e) =>
+              (window.location.href = "https://www.animaapp.com/")
+            }
+          >
             Account
           </Antd.Menu.Item>
 
-          <Antd.Menu.Item key="422" icon={<AntDesignIcons.SettingOutlined />} onClick={e =>  window.location.href='https://www.animaapp.com/'}>
+          <Antd.Menu.Item
+            key="422"
+            icon={<AntDesignIcons.SettingOutlined />}
+            onClick={(e) =>
+              (window.location.href = "https://www.animaapp.com/")
+            }
+          >
             Settings
           </Antd.Menu.Item>
 
@@ -32,7 +50,9 @@ function Menu() {
               key="873"
               icon={<AntDesignIcons.WechatFilled />}
               style={{ marginTop: "20px" }}
-              onClick={e =>  window.location.href='https://www.animaapp.com/'}
+              onClick={(e) =>
+                (window.location.href = "https://www.animaapp.com/")
+              }
             >
               Chat
             </Antd.Menu.Item>
@@ -40,7 +60,9 @@ function Menu() {
             <Antd.Menu.Item
               key="179"
               icon={<AntDesignIcons.QuestionCircleFilled />}
-              onClick={e =>  window.location.href='https://www.animaapp.com/'}
+              onClick={(e) =>
+                (window.location.href = "https://www.animaapp.com/")
+              }
             >
               FAQ
             </Antd.Menu.Item>

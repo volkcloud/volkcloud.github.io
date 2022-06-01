@@ -7,7 +7,13 @@ import "./Button.css";
 function Button({ text, icon, style = {} }) {
   return (
     <div className="button" style={style}>
-      <Antd.Button type="ghost" shape="default" size="large" disabled={false} onClick={e =>  window.location.href='https://www.animaapp.com/'}>
+      <Antd.Button
+        type="ghost"
+        shape="default"
+        size="large"
+        disabled={false}
+        onClick={(e) => (window.location.href = "https://www.animaapp.com/")}
+      >
         {icon}
         {text}
       </Antd.Button>
