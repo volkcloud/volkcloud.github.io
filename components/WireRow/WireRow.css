@@ -17,7 +17,8 @@
 .right-content {
   align-items: center;
   display: flex;
-  margin-left: 125px;
+  margin-right: 0;
+  margin-left: auto;
   min-width: 148px;
 }
 
