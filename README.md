@@ -10,6 +10,10 @@ In this tutorial, we redesigned SVBs banking dashboard using [Anima](https://www
 
 [![](https://animaapp.s3.amazonaws.com/sample-files/bank-website/bank-app-cover.png)](https://anima-bank-demo.netlify.app/)
 
+**[Youtube](https://www.youtube.com/watch?v=MzbolYUwjZI)**
+
+**[Blog](https://www.animaapp.com/blog/design-to-code/fullstack-react-app-figma-strapi-anima/)**
+
 ## Instructions
 
 ### Setup Strapi
