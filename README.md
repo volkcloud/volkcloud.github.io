@@ -2,9 +2,13 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/9d830211-5fb8-4d50-9622-0931e0d8a36f/deploy-status)](https://app.netlify.com/sites/anima-bank-demo/deploys)
 
-**A functioning bank prototype powered by Anima & Strapi: [Live Demo](https://anima-bank-demo.netlify.app/)**
+**A functioning bank app powered by Anima & Strapi: [Live Demo](https://anima-bank-demo.netlify.app/)**
 
-Most of the code was generated automatically with [Anima App](https://www.animaapp.com).
+In this tutorial, we redesigned SVBs banking dashboard using [Anima](https://www.animaapp.com)'s open source Component Library for Figma, then connected our data using [Strapi](https://strapi.io/)'s headless CMS.
+
+[Anima](https://www.animaapp.com) brings leading open source libraries like [Ant Design](https://ant.design/), [MUI](https://mui.com/), and [Recharts](https://recharts.org/) into Figma, enabling R&D teams to ship React apps faster than ever.
+
+[![](https://animaapp.s3.amazonaws.com/sample-files/bank-website/bank-app-cover.png)](https://anima-bank-demo.netlify.app/)
 
 ## Instructions
 
