@@ -5,10 +5,10 @@ import ForexChart from "../ForexChart";
 import "./ForexCard.css";
 
 function ForexCard({ title, currency }) {
-  balance = 7000;
-  rate = 1.12;
-  buyRate = 1.13;
-  sellRate = 1.11;
+  const balance = 7000;
+  const rate = 1.12;
+  const buyRate = 1.13;
+  const sellRate = 1.11;
 
   return (
     <div className="forex-card">
