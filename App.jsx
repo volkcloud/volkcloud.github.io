@@ -5,7 +5,7 @@ import SVBHome from "./components/SVBHome";
 
 function App() {
   return (
-    <Router>
+    <Router basename='/bank-website'>
       <Switch>
         <Route path="/:path(|svb-home)">
           <SVBHome/>
