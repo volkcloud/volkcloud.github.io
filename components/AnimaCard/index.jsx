@@ -10,12 +10,12 @@ function AnimaCard({ title, text }) {
         <div className="title-6 valign-text-middle poppins-normal-heavy-metal-20px">
           {title}
         </div>
-        <img className="divider-2" src="/img/divider-2@2x.svg" />
+        <img className="divider-2" src="img/divider-2@2x.svg" />
         <p className="text-1 poppins-normal-heavy-metal-15px">{text}</p>
       </div>
       <div className="logos-frame">
         <div className="anima-logo">
-          <img className="logo" src="/img/logo@2x.svg" />
+          <img className="logo" src="img/logo@2x.svg" />
         </div>
         <div className="social">
           <SocialIcon

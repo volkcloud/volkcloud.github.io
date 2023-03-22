@@ -30,7 +30,7 @@ function TransactionsCard({ title }) {
         </div>
         <DatePicker onChange={datePickerChange} />
       </div>
-      <img className="divider" src="/img/divider@2x.svg" />
+      <img className="divider" src="img/divider@2x.svg" />
       <div className="list">
         {transactions.map((transaction) => (
           <TransactionRow

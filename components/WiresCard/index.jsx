@@ -17,7 +17,7 @@ function WiresCard({ title }) {
           <div className="title-5 valign-text-middle poppins-normal-heavy-metal-20px">
             {title}
           </div>
-          <img className="divider-1" src="/img/divider@2x.svg" />
+          <img className="divider-1" src="img/divider@2x.svg" />
         </div>
         <Button
           text="Approve all"
