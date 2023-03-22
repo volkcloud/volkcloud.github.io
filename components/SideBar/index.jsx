@@ -5,7 +5,7 @@ import "./SideBar.css";
 function SideBar() {
   return (
     <div className="side-bar">
-      <img className="svb-cleaned-logo" src="/img/svb-cleaned-logo@2x.svg" />
+      <img className="svb-cleaned-logo" src="img/svb-cleaned-logo@2x.svg" />
       <Menu />
     </div>
   );
